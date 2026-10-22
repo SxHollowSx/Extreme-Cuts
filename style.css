@@ -1,0 +1,411 @@
+/* ==========================================================================
+   ESTILO DARK & GOLD - EXTREME CUTS BARBEARIA
+   ========================================================================== */
+:root {
+    --bg-dark: #0D0F12;          /* Fundo preto profundo */
+    --bg-card: #16191E;          /* Fundo dos cartões */
+    --bg-alt: #121418;           /* Fundo secundário */
+    
+    --text-light: #F3F4F6;       /* Texto claro */
+    --text-muted: #9CA3AF;       /* Texto secundário */
+    
+    --gold: #D97706;             /* Dourado/Âmbar elegante */
+    --gold-hover: #B45309;       /* Dourado escuro */
+    --gold-light: #FEF3C7;       /* Fundo suave dourado */
+    
+    --whatsapp: #25D366;
+    --radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-dark-alt {
+    background-color: var(--bg-alt);
+}
+
+/* NAVEGAÇÃO */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(13, 15, 18, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #262930;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--gold);
+}
+
+.btn-agendar {
+    background-color: var(--gold);
+    color: #FFFFFF !important;
+    padding: 8px 20px;
+    border-radius: var(--radius);
+    font-weight: 600;
+}
+
+.btn-agendar:hover {
+    background-color: var(--gold-hover);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 120px 0 100px;
+    text-align: center;
+    background: radial-gradient(circle at center, #1F242D 0%, var(--bg-dark) 70%);
+}
+
+.hero-container {
+    max-width: 800px;
+}
+
+.badge-gold {
+    display: inline-block;
+    background-color: rgba(217, 119, 6, 0.15);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 .highlight-gold {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* BOTÕES */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: #FFFFFF;
+}
+
+.btn-gold:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    background: transparent;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--gold);
+    color: #FFFFFF;
+}
+
+/* TITULOS DE SEÇÃO */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--text-muted);
+}
+
+/* GRIDS E CARDS */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card-feature {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: var(--radius);
+    border: 1px solid #262930;
+    transition: var(--transition);
+}
+
+.card-feature:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.icon-gold {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+/* TABELA DE SERVIÇOS */
+.service-box {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: var(--radius);
+    border: 1px solid #262930;
+    position: relative;
+}
+
+.featured-service {
+    border: 2px solid var(--gold);
+}
+
+.badge-pop {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--gold);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.service-header h3 {
+    font-size: 1.15rem;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.service-box p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* HORÁRIOS & LOCALIZAÇÃO */
+.align-center {
+    align-items: center;
+}
+
+.hours-list {
+    list-style: none;
+    margin: 20px 0 30px;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #262930;
+}
+
+.hours-list span {
+    color: var(--text-muted);
+}
+
+.location-box {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: var(--radius);
+    border: 1px solid #262930;
+    text-align: center;
+}
+
+.location-icon {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.location-box small {
+    color: var(--text-muted);
+    display: block;
+    margin-top: 10px;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #08090B;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #1F242D;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.dev-credits {
+    margin-top: 5px;
+}
+
+.dev-credits strong {
+    color: var(--gold);
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--whatsapp);
+    color: #FFFFFF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 10000;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--bg-dark);
+        padding: 25px 0;
+        border-bottom: 1px solid #262930;
+        transition: var(--transition);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+}
